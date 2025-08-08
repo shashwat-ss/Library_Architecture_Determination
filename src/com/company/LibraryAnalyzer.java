@@ -19,7 +19,6 @@ public class LibraryAnalyzer {
     private void collectLibraries(File directory) {
         File[] entries = directory.listFiles();
         if (entries == null) return;
-
         for (File file : entries) {
             if (file.isDirectory()) {
                 collectLibraries(file);
@@ -34,6 +33,7 @@ public class LibraryAnalyzer {
     }
 
     public void displayResult() {
+        System.out.println("Total number of Libraries : "+ discoveredLibs.size());
         System.out.printf("%-30s %-15s%n", "File", "ArchType");
         System.out.printf("%-30s %-15s%n", "====", "=========");
 

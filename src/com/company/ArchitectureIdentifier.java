@@ -11,11 +11,8 @@ public class ArchitectureIdentifier {
             stream = new FileInputStream(soFile);
             byte[] header = new byte[20];
             if (stream.read(header) < 20) return null;
-
             if (header[0] != 0x7f || header[1] != 'E' || header[2] != 'L' || header[3] != 'F') return null;
-
             int machineCode = ((header[19] & 0xFF) << 8) | (header[18] & 0xFF);
-
             switch (machineCode) {
                 case 0x28:
                     return "armeabi-v7a";
