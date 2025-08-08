@@ -1,6 +1,6 @@
 # Library Architecture Determination – ELF Architecture Identifier
 
-## 📌 Project Overview
+# Project Overview
 
 This tool recursively scans a given directory for `.so` (shared object) files, validates whether they are valid ELF libraries, and determines the target CPU architecture for each valid `.so` file.
 
@@ -28,7 +28,7 @@ OR
 
 
 
-## 📂 Project Structure
+##  Project Structure
     ├── src/
     │ └── com/company/
     │ ├── Main.java
